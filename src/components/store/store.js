@@ -37,6 +37,12 @@ export const store = new Vuex.Store({
         },
         login ({commit, dispatch}, authData) {
             // authData: username, password
+            //{
+            //    "exp": "2020-06-19T15:50:29.983747", 
+            //    "message": "auth ok", 
+            //    "token": "eyJ0eXAiOJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VybmFtZSI6ImFkbWluIiwiZXhwIjoxNTkyNTgxODI5fQ.mAeo7KaiFNGPECLcQS0LjxkrPyKyfjRjrEOLGL83r0g"
+            //}
+
             axios.post('/login', authData).then((rs) => {
                 dispatch('doLogin', rs.data)
                 return true

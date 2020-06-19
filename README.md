@@ -1,3 +1,5 @@
+![](./cover.png)
+
 # vuejs-vuex-login
 
 ## Project setup
